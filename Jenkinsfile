@@ -23,7 +23,7 @@ pipeline {
 
                 docker run -d \
                 --name demo-container \
-                -p 8081:8080 \
+                -p 8081:8081 \
                 demo-app
                 '''
             }
