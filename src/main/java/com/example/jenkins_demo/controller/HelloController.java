@@ -8,7 +8,7 @@ public class HelloController {
 
  @GetMapping("/")
  public String home() {
-   return "Hello from Jenkins + Docker";
+   return "Version 2 deployed";
  }
 
 }
