@@ -8,7 +8,7 @@ public class HelloController {
 
  @GetMapping("/")
  public String home() {
-   return "Version 2 deployed";
+   return "Version 2";
  }
 
 }
