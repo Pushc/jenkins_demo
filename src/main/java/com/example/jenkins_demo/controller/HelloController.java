@@ -9,7 +9,7 @@ public class HelloController {
  @GetMapping("/")
  public String home() {
 //    return "Version 3";
-    return "hello kubernetes33....";
+    return "hello kubernetes_2....";
  }
 
 }
