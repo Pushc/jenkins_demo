@@ -1,30 +1,17 @@
 pipeline {
     agent any
 
+    environment {
+        KUBECONFIG = '/home/pushkar8983/.kube/config'
+    }
+
     stages {
-
-        stage('Build') {
-            steps {
-                sh 'mvn clean package'
-            }
-        }
-
-        stage('Docker Build') {
-            steps {
-                sh 'docker build -t demo-app .'
-            }
-        }
-
-        stage('Deploy') {
+        stage('Verify') {
             steps {
                 sh '''
-                docker stop demo-container || true
-                docker rm demo-container || true
-
-                docker run -d \
-                --name demo-container \
-                -p 8081:8081 \
-                demo-app
+                whoami
+                docker ps
+                kubectl get nodes
                 '''
             }
         }
